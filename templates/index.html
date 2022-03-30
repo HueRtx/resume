@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VSECODER resume</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+      body { margin: 0; padding-bottom: 3rem; }
+      main {
+        max-width: 700px;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-family: 'JetBrains Mono', monospace;
+      }
+      pre {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .border {
+        border-bottom: 2px dashed black;
+      }
+      .mobile-header {
+        display: none;
+      }
+      a {
+        color: black;
+        font-size: larger;
+      }
+      h2 {
+        display: inline-block;
+      }
+      div {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      p {
+        text-align: justify;
+      }
+      @media screen and (max-width: 400px) {
+        .mobile-header {
+          display: block;
+        }
+        .pc-header {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="border">
+        <pre class="pc-header">
+                                _           
+  __   _____  ___  ___ ___   __| | ___ _ __ 
+  \ \ / / __|/ _ \/ __/ _ \ / _` |/ _ \ '__|
+   \ V /\__ \  __/ (_| (_) | (_| |  __/ |   
+    \_/ |___/\___|\___\___/ \__,_|\___|_|     <b>resume</b>
+
+
+      <b id="online"></b>
+
+
+      [<a href="https://t.me/vsecoder">Telegram</a>]   [<a href="https://github.com/vsecoder">Github</a>]
+        </pre>
+        <pre class="mobile-header">
+
+
+  <h2>VSECODER</h2> <b>resume</b>
+
+
+      <i id="online"></i>
+
+
+      [<a href="https://t.me/vsecoder">Telegram</a>]   [<a href="https://github.com/vsecoder">Github</a>]
+        </pre>
+      </div>
+      <div class="border">
+        <pre><b>Web design, JavaScript, Python</b></pre>
+        <p>Hello, I'm a developer! I have been developing since an early age, and I fell in love with this business not as a hobby, but as a job.</p>
+        <p>My resume contains a bunch of different rubbish that I'm too lazy to list, it's better to look at Github for yourself)))</p>
+        <p>P.S. this whole page is written with text without superfluous, while I can write colorful pages!</p>
+      </div>
+      <div class="border">
+        <p>Also, by the way, this page is on Socket.io, and you see in real time how many users read my resume, cool? I can do it even better! [<a href="https://github.com/vsecoder/resume">SOURCES</a>]</p>
+      </div>
+      <div class="border">
+        <pre><b>Copyright (c) 2022 - this time. [<a href="https://choosealicense.com/licenses/mit/">LICENSE MIT</a>]</b></pre>
+      </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('online', function(text) {
+        var online = document.querySelectorAll('#online');
+        for (let index = 0; index < online.length; index++) {
+          const element = online[index];
+          element.textContent = text + ' people are reading this page';
+        }
+      });
+    </script>
+  </body>
+</html>
