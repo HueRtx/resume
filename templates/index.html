@@ -4,10 +4,10 @@
     <link type="image/x-icon" rel="shortcut icon" href="https://raw.githubusercontent.com/vsecoder/resume/main/templates/favicon.ico">
     <title>VSECODER resume</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="">
+    <meta name="description" content="The @vsecoder developer resume.">
     <meta property="og:site_name" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="VSECODER resume">
+    <meta property="og:description" content="The @vsecoder developer resume.">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
       body { margin: 0; padding-bottom: 3rem; }
@@ -57,10 +57,10 @@
     <main>
       <div class="border">
         <pre class="pc-header">
-                              _           
-__   _____  ___  ___ ___   __| | ___ _ __ 
+                              _
+__   _____  ___  ___ ___   __| | ___ _ __
 \ \ / / __|/ _ \/ __/ _ \ / _` |/ _ \ '__|
- \ V /\__ \  __/ (_| (_) | (_| |  __/ |   
+ \ V /\__ \  __/ (_| (_) | (_| |  __/ |
   \_/ |___/\___|\___\___/ \__,_|\___|_|     <b>resume</b>
 
 
@@ -91,7 +91,7 @@ __   _____  ___  ___ ___   __| | ___ _ __
         <p>Also, by the way, this page is on Socket.io, and you see in real time how many users read my resume, cool? I can do it even better! [<a href="https://github.com/vsecoder/resume">SOURCES</a>]</p>
       </div>
       <div class="border">
-        <pre><b>Copyright (c) 2022 - this time. 
+        <pre><b>Copyright (c) 2022 - this time.
         [<a href="https://choosealicense.com/licenses/mit/">LICENSE MIT</a>]</b></pre>
       </div>
     </main>
@@ -102,7 +102,9 @@ __   _____  ___  ___ ___   __| | ___ _ __
         var online = document.querySelectorAll('#online');
         for (let index = 0; index < online.length; index++) {
           const element = online[index];
-          element.textContent = text + ' people are reading this page';
+          let a = 'are';
+          if (text == '1') { a = 'is' }
+          element.textContent = `${text} people ${a} reading this page`;
         }
       });
     </script>
